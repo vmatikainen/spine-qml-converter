@@ -6,7 +6,7 @@ Item {
     property Bone bone: null
 
     property Item setupAttachment: null
-    property Item attachment: null //setupAttachment
+    property Item attachment: null
 
     property color setupColor: "#FFFFFFFF"
     property color color: null

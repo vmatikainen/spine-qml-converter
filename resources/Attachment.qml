@@ -2,7 +2,7 @@ import QtQuick 2.0
 
 Item {
     property Item setupParent: null
-    parent: null //setupParent
+    parent: null 
 
     Component.onCompleted: {
         reset();
