@@ -5,8 +5,8 @@ Item {
 
     function animate(animation) {
         if (currentAnimation !== null) {
+//            reset();
             currentAnimation.stop();
-            reset();
         }
         animation.start();
         currentAnimation = animation;

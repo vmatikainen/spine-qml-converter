@@ -145,7 +145,10 @@ Item {
             uniform highp vec4 color;
             void main() {
                 highp vec4 pixelColor = texture2D(source, qt_TexCoord0);
+//                gl_FragColor = pixelColor * color * qt_Opacity;
                 gl_FragColor = vec4(vec3(pixelColor.rgb * color.rgb), pixelColor.a * qt_Opacity);
+
+/*                gl_FragColor = vec4(mix(pixelColor.rgb/max(pixelColor.a, 0.00390625), color.rgb/max(color.a, 0.00390625), color.a) * pixelColor.a, pixelColor.a) * qt_Opacity;*/
             }
         "
     }

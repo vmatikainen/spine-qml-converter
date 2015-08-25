@@ -1,15 +1,18 @@
 import QtQuick 2.0
 import QtGraphicalEffects 1.0
+import Spine 1.0
 
 Item {
     id: slot
-    property Bone bone: null
+    property BoneTransform bone: null
 
     property Item setupAttachment: null
-    property Item attachment: null
+    property Item attachment: null //setupAttachment
 
     property color setupColor: "#FFFFFFFF"
     property color color: null
+
+    transform: bone
 
     function attach(item) {
         if (attachment === item)
